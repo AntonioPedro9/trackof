@@ -26,6 +26,20 @@ module.exports = {
     }
   },
 
+  async update(request, response, next) {
+    try {
+      const { id } = request.params;
+      const { name } = request.body;
+
+		  await connection("boards").where("id", id).update({ name });
+
+      return response.json({ message: "Board updated." });
+    }
+    catch (error) {
+      next(error);
+    }
+  },
+
   async delete(request, response, next) {
     try {
       const { id } = request.params;

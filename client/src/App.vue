@@ -72,7 +72,7 @@ main {
   flex-wrap: wrap;
 }
 main .card {
-  width: 288px;
+  width: 320px;
 }
 main .fab {
   position: fixed;
