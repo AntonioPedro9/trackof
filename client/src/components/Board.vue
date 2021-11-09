@@ -1,5 +1,5 @@
 <template>
-  <div class="card theme-yellow">
+  <div class="card">
     <div class="board-header">
       <h5>{{ name }}</h5>
       <div>

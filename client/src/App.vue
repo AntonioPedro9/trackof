@@ -62,9 +62,6 @@ export default {
 </script>
 
 <style>
-body {
-  background-color: #222;
-}
 main {
   display: flex;
   justify-content: center;
