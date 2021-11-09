@@ -31,7 +31,7 @@ module.exports = {
       const { id } = request.params;
       const { name } = request.body;
 
-		  await connection("boards").where("id", id).update({ name });
+      await connection("boards").where("id", id).update({ name });
 
       return response.json({ message: "Board updated." });
     }
@@ -44,7 +44,7 @@ module.exports = {
     try {
       const { id } = request.params;
 
-		  await connection("boards").where("id", id).delete();
+      await connection("boards").where("id", id).delete();
 
       return response.json({ message: "Board deleted." });
     }

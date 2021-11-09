@@ -6,7 +6,7 @@ module.exports = {
     try {
       const { text, board_id } = request.body;
 
-      await connection("notes").insert({ 
+      await connection("notes").insert({
         text,
         board_id
       });
