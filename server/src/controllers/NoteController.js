@@ -4,10 +4,11 @@ module.exports = {
 
   async create(request, response, next) {
     try {
-      const { text, board_id } = request.body;
+      const { text, date, board_id } = request.body;
 
       await connection("notes").insert({
         text,
+        date,
         board_id
       });
 

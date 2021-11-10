@@ -42,22 +42,32 @@ export default {
   },
 
   methods: {
+    getDate() {
+      let date = new Date();
+      let day = date.getDate().toString().padStart(2, "0");
+      let month = (date.getMonth() + 1).toString().padStart(2, "0");
+      let year = date.getFullYear();
+
+      return `${day}/${month}/${year}`
+    },
+
+    createNote() {
+      let note_text = prompt("New note");
+      let note_date = this.getDate();
+
+      if (note_text && note_text.trim() !== "" && note_date) {
+        api
+          .post("/notes", { text: note_text, date: note_date, board_id: this.id })
+          .then(() => this.getNotes())
+          .catch((error) => console.log(error));
+      }
+    },
+
     getNotes() {
       api
         .get(`/notes?board_id=${this.id}`)
         .then((response) => (this.notes = response.data))
         .catch((error) => console.log(error));
-    },
-
-    createNote() {
-      let note_text = prompt("New note");
-
-      if (note_text && note_text.trim() !== "") {
-        api
-          .post("/notes", { text: note_text, board_id: this.id })
-          .then(() => this.getNotes())
-          .catch((error) => console.log(error));
-      }
     },
 
     editBoard() {
