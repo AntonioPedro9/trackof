@@ -65,11 +65,7 @@ export default {
 main {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   flex-wrap: wrap;
-}
-main .card {
-  width: 320px;
 }
 main .fab {
   position: fixed;

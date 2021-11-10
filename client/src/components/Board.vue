@@ -8,7 +8,9 @@
         <svg @click="deleteBoard()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#666"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
       </div>
     </div>
-    <Note v-for="note in notes" :key="note.id" :date="note.date" :text="note.text" />
+    <div class="scroll">
+      <Note v-for="note in notes" :key="note.id" :date="note.date" :text="note.text" />
+    </div>
   </div>
 </template>
 
@@ -92,5 +94,26 @@ export default {
 .board-header svg {
   margin: 0.4rem;
   cursor: pointer;
+}
+.card {
+  width: 320px;
+}
+.scroll {
+  height: 320px;
+  margin: 8px;
+  overflow-y: scroll;
+}
+.scroll .note-text:last-child {
+  margin-bottom: 0px;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.15);
 }
 </style>

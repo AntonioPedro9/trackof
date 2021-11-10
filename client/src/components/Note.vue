@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <p>
+    <p class="note-text">
       <strong>{{ date.slice(0, 10) }}: </strong>
       {{ text }}
     </p>
-  </div>
 </template>
 
 <script>
@@ -19,7 +17,10 @@ export default {
 </script>
 
 <style scoped>
-p {
+.note-text {
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 16px;
   text-align: left;
 }
 </style>
