@@ -19,6 +19,7 @@ export default {
 <style scoped>
 p {
   padding: 0px;
+  padding-right: 8px;
   margin: 0px;
   margin-bottom: 16px;
   text-align: left;

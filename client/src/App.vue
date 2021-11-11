@@ -74,11 +74,11 @@ export default {
   height: 16px;
 }
 .boards-scroll::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.12);
+  background-color: rgba(0, 0, 0, 0.16);
   border-radius: 2px;
 }
 .boards-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.16);
+  background: rgba(0, 0, 0, 0.2);
 }
 .fab {
   position: fixed;

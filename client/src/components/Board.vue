@@ -109,8 +109,8 @@ export default {
 
 <style scoped>
 .card {
-  min-width: 320px;
-  max-width: 320px;
+  min-width: 322px;
+  max-width: 322px;
 }
 .card .board-header {
   display: flex;
@@ -133,10 +133,10 @@ export default {
   width: 8px;
 }
 .notes-scroll::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.12);
+  background-color: rgba(0, 0, 0, 0.16);
   border-radius: 4px;
 }
 .notes-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.16);
+  background: rgba(0, 0, 0, 0.20);
 }
 </style>
