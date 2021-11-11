@@ -1,8 +1,8 @@
 <template>
-    <p class="note-text">
-      <strong>{{ date.slice(0, 10) }}: </strong>
-      {{ text }}
-    </p>
+  <p>
+    <strong>{{ date.slice(0, 10) }}: </strong>
+    {{ text }}
+  </p>
 </template>
 
 <script>
@@ -12,12 +12,12 @@ export default {
   props: {
     text: String,
     date: String,
-  }
+  },
 };
 </script>
 
 <style scoped>
-.note-text {
+p {
   padding: 0px;
   margin: 0px;
   margin-bottom: 16px;
