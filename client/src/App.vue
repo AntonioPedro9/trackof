@@ -68,7 +68,7 @@ export default {
   display: flex;
   align-items: flex-start;
   padding: 8px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 .boards-scroll::-webkit-scrollbar {
   height: 16px;
