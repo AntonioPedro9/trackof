@@ -8,7 +8,7 @@
         <img @click="deleteBoard()" :src="delete_black" />
       </div>
     </div>
-    <div class="scroll">
+    <div class="notes-scroll">
       <Note
         v-for="note in notes"
         :key="note.id"
@@ -109,33 +109,34 @@ export default {
 
 <style scoped>
 .card {
-  width: 320px;
+  min-width: 320px;
+  max-width: 320px;
 }
-.board-header {
+.card .board-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.board-header img {
+.card .board-header img {
   margin: 0.4rem;
   cursor: pointer;
 }
-.scroll {
+.notes-scroll {
   height: 320px;
   margin: 8px;
   overflow-y: scroll;
 }
-.scroll p:last-child {
+.notes-scroll p:last-child {
   margin-bottom: 0px;
 }
-::-webkit-scrollbar {
+.notes-scroll::-webkit-scrollbar {
   width: 8px;
 }
-::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.1);
+.notes-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.15);
+.notes-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.16);
 }
 </style>

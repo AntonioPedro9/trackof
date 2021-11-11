@@ -1,17 +1,17 @@
 <template>
   <div>
     <Header />
-    <main>
+    <div class="boards-scroll">
       <Board
         v-for="board in boards"
         :key="board.id"
         :name="board.name"
         :id="board.id"
       />
-      <button @click="createBoard()" class="fab theme-deep-orange">
-        <img :src="add_white">
-      </button>
-    </main>
+    </div>
+    <button @click="createBoard()" class="fab theme-deep-orange">
+      <img :src="add_white" />
+    </button>
   </div>
 </template>
 
@@ -63,12 +63,24 @@ export default {
 </script>
 
 <style>
-main {
+.boards-scroll {
+  height: calc(100vh - 70px);
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 8px;
+  overflow-x: scroll;
 }
-main .fab {
+.boards-scroll::-webkit-scrollbar {
+  height: 16px;
+}
+.boards-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+}
+.boards-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.16);
+}
+.fab {
   position: fixed;
   right: 8vw;
   bottom: 24px;

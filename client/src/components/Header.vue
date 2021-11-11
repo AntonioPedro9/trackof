@@ -9,3 +9,9 @@ export default {
   name: "Header",
 };
 </script>
+
+<style scoped>
+header {
+  height: 70px;
+}
+</style>
