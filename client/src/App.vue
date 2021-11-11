@@ -73,8 +73,11 @@ export default {
 .boards-scroll::-webkit-scrollbar {
   height: 16px;
 }
+.boards-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
 .boards-scroll::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.16);
+  background-color: rgba(0, 0, 0, 0.15);
   border-radius: 2px;
 }
 .boards-scroll::-webkit-scrollbar-thumb:hover {

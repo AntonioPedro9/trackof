@@ -120,6 +120,7 @@ export default {
 .card .board-header img {
   margin: 0.4rem;
   cursor: pointer;
+  user-select: none;
 }
 .notes-scroll {
   height: 320px;
@@ -133,10 +134,10 @@ export default {
   width: 8px;
 }
 .notes-scroll::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.16);
+  background-color: rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 .notes-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.20);
+  background: rgba(0, 0, 0, 0.2);
 }
 </style>
