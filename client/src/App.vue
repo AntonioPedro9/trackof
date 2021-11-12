@@ -5,8 +5,8 @@
       <Board
         v-for="board in boards"
         :key="board.id"
-        :name="board.name"
         :id="board.id"
+        :name="board.name"
       />
     </div>
     <button @click="createBoard()" class="fab theme-deep-orange">

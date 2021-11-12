@@ -44,4 +44,18 @@ module.exports = {
     }
   },
 
+  async update(request, response, next) {
+    try {
+      const { id } = request.params;
+      const { text } = request.body;
+
+      await connection("notes").where("id", id).update({ text });
+
+      return response.json({ message: "Note updated." });
+    }
+    catch (error) {
+      next(error);
+    }
+  },
+
 };

@@ -12,6 +12,7 @@
       <Note
         v-for="note in notes"
         :key="note.id"
+        :id="note.id"
         :date="note.date"
         :text="note.text"
       />
@@ -28,8 +29,8 @@ export default {
   name: "Board",
 
   props: {
-    name: String,
     id: Number,
+    name: String,
   },
 
   components: {

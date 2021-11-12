@@ -1,18 +1,34 @@
 <template>
-  <p>
+  <p @click="updateNote()">
     <strong>{{ date.slice(0, 10) }}: </strong>
     {{ text }}
   </p>
 </template>
 
 <script>
+import api from "@/services/api";
+
 export default {
   name: "Note",
 
   props: {
-    text: String,
+    id: Number,
     date: String,
+    text: String,
   },
+
+  methods: {
+    updateNote() {
+      let new_note_text = prompt("Edit note");
+
+      if (new_note_text && new_note_text.trim() !== "") {
+        api
+          .put(`/notes/${this.id}`, { text: new_note_text })
+          .then(() => this.$parent.getNotes())
+          .catch((error) => console.log(error));
+      }
+    }
+  }
 };
 </script>
 
@@ -23,5 +39,9 @@ p {
   margin: 0px;
   margin-bottom: 16px;
   text-align: left;
+}
+p:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 </style>

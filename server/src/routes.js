@@ -11,5 +11,6 @@ routes.delete("/boards/:id", BoardController.delete);
 
 routes.post("/notes", NoteController.create);
 routes.get("/notes", NoteController.list);
+routes.put("/notes/:id", NoteController.update);
 
 module.exports = routes;
