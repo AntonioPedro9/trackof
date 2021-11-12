@@ -19,7 +19,7 @@ export default {
 
   methods: {
     updateNote() {
-      let new_note_text = prompt("Edit note");
+      let new_note_text = prompt("Edit note", this.text);
 
       if (new_note_text && new_note_text.trim() !== "") {
         api
