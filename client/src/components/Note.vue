@@ -41,7 +41,7 @@ p {
   text-align: left;
 }
 p:hover {
-  text-decoration: underline;
+  opacity: 0.6;
   cursor: pointer;
 }
 </style>
