@@ -39,6 +39,7 @@ p {
   margin: 0px;
   margin-bottom: 16px;
   text-align: left;
+  transition: all 0.2s;
 }
 p:hover {
   opacity: 0.6;
