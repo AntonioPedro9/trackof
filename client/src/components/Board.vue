@@ -84,7 +84,7 @@ export default {
     },
 
     editBoard() {
-      let new_board_name = prompt("Rename board");
+      let new_board_name = prompt("Rename board", this.name);
 
       if (new_board_name && new_board_name.trim() !== "") {
         api
