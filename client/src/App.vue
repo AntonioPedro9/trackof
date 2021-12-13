@@ -2,11 +2,11 @@
   <div>
     <Header />
     <div class="boards-scroll">
-      <Board
-        v-for="board in boards"
-        :key="board.id"
-        :id="board.id"
-        :name="board.name"
+      <Board 
+        v-for="board in boards" 
+        :key="board.id" 
+        :id="board.id" 
+        :name="board.name" 
       />
     </div>
     <button @click="createBoard()" class="fab theme-deep-orange">

@@ -27,8 +27,8 @@ export default {
           .then(() => this.$parent.getNotes())
           .catch((error) => console.log(error));
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -39,7 +39,7 @@ p {
   margin: 0px;
   margin-bottom: 16px;
   text-align: left;
-  transition: all 0.2s;
+  transition: all 0.1s;
 }
 p:hover {
   opacity: 0.6;
