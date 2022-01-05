@@ -38,7 +38,6 @@ p {
   padding-right: 8px;
   margin: 0px;
   margin-bottom: 16px;
-  text-align: left;
   transition: all 0.1s;
 }
 p:hover {

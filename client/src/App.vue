@@ -2,12 +2,7 @@
   <div>
     <Header />
     <div class="boards-scroll">
-      <Board 
-        v-for="board in boards" 
-        :key="board.id" 
-        :id="board.id" 
-        :name="board.name" 
-      />
+      <Board v-for="board in boards" :key="board.id" :id="board.id" :name="board.name" />
     </div>
     <button @click="createBoard()" class="fab theme-deep-orange">
       <img :src="add_white" />
@@ -65,9 +60,9 @@ export default {
 <style>
 .boards-scroll {
   height: calc(100vh - 70px);
+  padding: 1.6rem;
   display: flex;
   align-items: flex-start;
-  padding: 8px;
   overflow-x: auto;
 }
 .boards-scroll::-webkit-scrollbar {
@@ -86,6 +81,6 @@ export default {
 .fab {
   position: fixed;
   right: 8vw;
-  bottom: 24px;
+  bottom: 32px;
 }
 </style>

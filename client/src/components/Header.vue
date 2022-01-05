@@ -1,5 +1,5 @@
 <template>
-  <header class="theme-teal">
+  <header class="theme-teal p2">
     <h4>Scrum Notes</h4>
   </header>
 </template>

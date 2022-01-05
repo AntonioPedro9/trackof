@@ -1,6 +1,6 @@
 <template>
-  <div class="card">
-    <div class="board-header">
+  <div class="card m2 p2">
+    <div class="board-header mb2">
       <h5>{{ name }}</h5>
       <div>
         <img @click="createNote()" :src="add_black" />
@@ -9,13 +9,7 @@
       </div>
     </div>
     <div class="notes-scroll">
-      <Note
-        v-for="note in notes"
-        :key="note.id"
-        :id="note.id"
-        :date="note.date"
-        :text="note.text"
-      />
+      <Note v-for="note in notes" :key="note.id" :id="note.id" :date="note.date" :text="note.text" />
     </div>
   </div>
 </template>
@@ -125,7 +119,6 @@ export default {
 }
 .notes-scroll {
   height: 320px;
-  margin: 8px;
   overflow-y: scroll;
 }
 .notes-scroll p:last-child {
