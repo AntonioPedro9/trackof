@@ -1,9 +1,11 @@
 <template>
   <div>
     <Header />
-    <div class="boards-scroll">
+
+    <div class="board-container">
       <Board v-for="board in boards" :key="board.id" :id="board.id" :name="board.name" />
     </div>
+
     <button @click="createBoard()" class="fab theme-deep-orange">
       <img :src="add_white" />
     </button>
@@ -13,7 +15,6 @@
 <script>
 import Header from "./components/Header.vue";
 import Board from "./components/Board.vue";
-
 import api from "./services/api";
 
 export default {
@@ -58,24 +59,24 @@ export default {
 </script>
 
 <style>
-.boards-scroll {
+.board-container {
   height: calc(100vh - 70px);
   padding: 1.6rem;
   display: flex;
   align-items: flex-start;
   overflow-x: auto;
 }
-.boards-scroll::-webkit-scrollbar {
+.board-container::-webkit-scrollbar {
   height: 16px;
 }
-.boards-scroll::-webkit-scrollbar-track {
+.board-container::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.1);
 }
-.boards-scroll::-webkit-scrollbar-thumb {
+.board-container::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 2px;
 }
-.boards-scroll::-webkit-scrollbar-thumb:hover {
+.board-container::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.2);
 }
 .fab {

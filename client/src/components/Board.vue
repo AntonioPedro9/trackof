@@ -2,13 +2,15 @@
   <div class="card m2 p2">
     <div class="board-header mb2">
       <h5>{{ name }}</h5>
+
       <div>
         <img @click="createNote()" :src="add_black" />
         <img @click="editBoard()" :src="edit_black" />
         <img @click="deleteBoard()" :src="delete_black" />
       </div>
     </div>
-    <div class="notes-scroll">
+
+    <div class="note-container">
       <Note v-for="note in notes" :key="note.id" :id="note.id" :date="note.date" :text="note.text" />
     </div>
   </div>
@@ -16,7 +18,6 @@
 
 <script>
 import Note from "../components/Note.vue";
-
 import api from "@/services/api";
 
 export default {
@@ -117,21 +118,21 @@ export default {
   cursor: pointer;
   user-select: none;
 }
-.notes-scroll {
+.note-container {
   height: 320px;
   overflow-y: scroll;
 }
-.notes-scroll p:last-child {
+.note-container p:last-child {
   margin-bottom: 0px;
 }
-.notes-scroll::-webkit-scrollbar {
+.note-container::-webkit-scrollbar {
   width: 8px;
 }
-.notes-scroll::-webkit-scrollbar-thumb {
+.note-container::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
-.notes-scroll::-webkit-scrollbar-thumb:hover {
+.note-container::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.2);
 }
 </style>

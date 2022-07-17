@@ -1,7 +1,5 @@
 {
   "name": "server",
-  "version": "1.0.0",
-  "description": "",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
@@ -14,7 +12,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "knex": "^0.95.13",
-    "nodemon": "^2.0.14",
     "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }

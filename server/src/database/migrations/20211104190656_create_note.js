@@ -4,10 +4,7 @@ exports.up = function (knex) {
     table.string("date").notNullable();
     table.string("text").notNullable();
 
-    table.integer("board_id")
-      .references("boards.id")
-      .onDelete("CASCADE")
-      .notNullable();
+    table.integer("board_id").references("boards.id").onDelete("CASCADE").notNullable();
   });
 };
 
