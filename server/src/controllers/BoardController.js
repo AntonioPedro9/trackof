@@ -29,7 +29,7 @@ module.exports = {
    *     description: List database boards
    *     responses:
    *       '200':
-   *         description: Boards was listed successfully
+   *         description: Boards were listed successfully
    *       '400':
    *         description: Failed to list boards
    */
